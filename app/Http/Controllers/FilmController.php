@@ -36,7 +36,7 @@ class FilmController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('films.show', ['film' => Film::find($id)]);
     }
 
     /**
