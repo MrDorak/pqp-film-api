@@ -18,9 +18,9 @@ class FilmFactory extends Factory
     {
         return [
             'movie_id' => fake()->randomNumber(5),
-            'title' => fake()->text(),
-            'overview' => fake()->realText(),
-            'poster_path' => null,
+            'title' => fake()->sentence(),
+            'overview' => fake()->paragraph(10),
+            'poster_path' => fake()->imageUrl(),
             'release_date' => fake()->date(),
         ];
     }

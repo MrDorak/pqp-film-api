@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('films', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('movie_id');
+            $table->unsignedInteger('movie_id')->unique();
             $table->string('title');
             $table->text('overview');
             $table->string('poster_path')->nullable();
