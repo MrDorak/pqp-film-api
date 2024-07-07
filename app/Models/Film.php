@@ -33,4 +33,9 @@ class Film extends Model
             'release_date' => 'datetime',
         ];
     }
+
+    public function getThumbnailUrl()
+    {
+        return 'https://image.tmdb.org/t/p/w500' . $this->poster_path;
+    }
 }
